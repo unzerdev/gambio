@@ -1,6 +1,6 @@
 ![Logo](https://dev.unzer.com/wp-content/uploads/2020/09/Unzer__PrimaryLogo_Raspberry_RGB.png)
 
-# Unzer OXID6 Plugin
+# Unzer Gambio Plugin
 This plugin provides for an easy way to connect to the Unzer Rest API.
 
 Please refer to the attached manual file for installation instructions and usage information.
