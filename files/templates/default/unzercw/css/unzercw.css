@@ -1,0 +1,149 @@
+@media screen and (min-width: 980px) {
+	.unzercw-confirmation-form .unzercw-control-group > .unzercw-controls {
+		margin-left: 220px;
+	}
+	
+	.unzercw-confirmation-form .unzercw-description {
+		margin-left: 230px;
+	}
+	
+	.unzercw-confirmation-form .unzercw-error {
+		margin-left: 230px;
+	}
+	
+	.unzercw-confirmation-form .unzercw-payment-form-confirm {
+		margin-left: 230px;
+	}
+	
+	.unzercw-confirmation-form .unzercw-control-label {
+		float: left;
+		text-align: right;
+		width: 200px;
+	}
+}
+
+
+.unzercw-payment-image {
+	float: left;
+	margin-right: 10px;
+}
+
+.unzercw-confirmation-form input, .unzercw-confirmation-form textarea {
+	border: 2px solid #B5B5B5;
+	padding: 5px;
+}
+
+.unzercw-confirmation-form input:focus, .unzercw-confirmation-form textarea:focus {
+	outline: 0px;
+}
+
+
+.unzercw-error-message {
+	padding: 6px;
+	border: solid #CC0000 1px;
+	color: #CC0000;
+	margin-bottom: 10px;
+}
+
+.unzercw-confirm-button {
+	float: right;
+}
+
+.unzercw-multi-control .unzercw-controls { 
+	display: inline;
+}
+
+.unzercw-confirmation-form {
+	text-align: left;
+	margin-top: 10px;
+}
+
+.unzercw-confirmation-form .unzercw-control-group {
+	margin-bottom: 15px;
+}
+
+.unzercw-confirmation-form .unzercw-control-label {
+	font-size: 14px;
+	display: inline-block;
+	padding: 6px 15px;
+	font-size: 14px;
+}
+.unzercw-confirmation-form .unzercw-control-label .unzercw-required {
+	color: #990000;
+}
+
+.unzercw-confirmation-form .unzercw-error {
+	color: #D8000C;
+}
+
+.unzercw-confirmation-form .unzercw-element-error input[type='text'], .unzercw-element-error input[type='password'], .unzercw-element-error select{
+	border-color: #D8000C;
+}
+
+.unzercw-confirmation-form .unzercw-card-cvc input[type='text']{
+	width: 60px;
+}
+
+
+.unzercw-confirmation-form .unzercw-multi-control {
+	overflow: auto;
+}
+
+.unzercw-iframe {
+	height: 550px;
+	width: 100%;
+	border: none;
+}
+
+.unzercw-widget {
+	width: 100%;
+	border: none;
+}
+
+
+.unzercw-confirmation-form .card-brand-image-box {
+	display: inline-block;
+}
+
+
+.unzercw-confirmation-form .card-brand-image-color.brand-is-deselected {
+	display:none;
+}
+
+.unzercw-confirmation-form .card-brand-image-grey.brand-is-selected {
+	display:none;
+}
+
+.unzercw-confirmation-form .card-brand-image-selection {
+	margin-top: 3px;
+}
+
+.unzercw-confirmation-form .card-brand-image-selection img {
+	width:auto;
+	height: 25px;
+	margin-right: 3px;
+}
+
+.unzercw-confirmation-form .invalid-card-number, .unzercw-confirmation-form .invalid-cvc-number {
+	border-color: #fb7f88;
+	background-image: url(../images/invalid.png);
+	background-position: 95% center;
+	background-repeat: no-repeat;
+}
+
+.unzercw-confirmation-form .valid-card-number, .unzercw-confirmation-form .valid-cvc-number {
+	background-image: url(../images/valid.png);
+	background-position: 95% center;
+	background-repeat: no-repeat;
+}
+
+
+.unzercw-confirmation-form .unzercw-expiration-date select {
+	margin-right: 5px;
+}
+
+
+
+
+
+

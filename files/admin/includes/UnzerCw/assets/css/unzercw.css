@@ -1,0 +1,168 @@
+body {
+	padding-top: 60px;
+}
+
+.footer {
+	border-top: #EDEDED 1px solid;
+	margin-top: 30px;
+}
+
+.footer .container {
+	padding-top: 15px;
+	padding-bottom: 45px;
+}
+
+
+
+
+
+#transaction-grid table .table th{
+	white-space: nowrap;
+}
+
+#transaction-grid  .table .btn {
+	padding-right: 2px;
+}
+
+#transaction-grid  .table td:last-child{
+	white-space: nowrap;
+}
+
+.ascending {
+	background-image: url("../img/down.png");
+	background-repeat: no-repeat;
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+	line-height: 14px;
+}
+
+.descending {
+	background-image: url("../img/up.png");
+	display: inline-block;
+	background-repeat: no-repeat;
+	width: 14px;
+	height: 14px;
+	line-height: 14px;
+}
+
+.reset-sorting {
+	background-image: url("../img/delete.png");
+	display: inline-block;
+	background-repeat: no-repeat;
+	width: 14px;
+	height: 14px;
+	line-height: 14px;
+}
+
+.no-sorting .reset-sorting {
+	display: none;
+}
+
+.descending-sorting .descending {
+	display: none;
+}
+
+.ascending-sorting .ascending {
+	display: none;
+}
+
+.sorting {
+	float:right;
+}
+
+select.grid-limit {
+	width: 60px;
+	margin-right: -4px;
+}
+
+.grid-limit-box {
+	text-align: right;
+}
+
+.grid .pagination {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.grid-filter-row input, .grid-filter-row select {
+	margin-bottom: 0;
+	width: 95%;
+}
+
+.grid-filter-row {
+	border-bottom-width: 2px;
+}
+
+
+
+
+
+
+.unzercw-multi-control .unzercw-controls { 
+	display: inline;
+}
+
+.unzercw-confirmation-form {
+	text-align: left;
+	margin-top: 10px;
+}
+
+.unzercw-confirmation-form .unzercw-control-group {
+	margin-bottom: 15px;
+}
+
+.unzercw-confirmation-form .unzercw-control-label {
+	font-size: 14px;
+	display: inline-block;
+	padding: 6px 15px;
+	width: 200px;
+	font-size: 14px;
+	text-align: right;
+	float: left;
+}
+.unzercw-confirmation-form .unzercw-control-label .unzercw-required {
+	color: #990000;
+}
+
+.unzercw-confirmation-form .unzercw-control-group > .unzercw-controls {
+	margin-left: 220px;
+}
+
+.unzercw-confirmation-form .unzercw-description {
+	margin-left: 230px;
+}
+
+.unzercw-confirmation-form .unzercw-error {
+	margin-left: 230px;
+	color: #D8000C;
+}
+
+.unzercw-confirmation-form .unzercw-element-error input[type='text'], .unzercw-element-error input[type='password'], .unzercw-element-error select{
+	border-color: #D8000C;
+}
+
+.unzercw-confirmation-form .unzercw-card-cvc input[type='text']{
+	width: 40px;
+}
+
+
+.unzercw-confirmation-form .unzercw-multi-control {
+	overflow: auto;
+}
+.unzercw-confirmation-form .unzercw-payment-form-confirm {
+	margin-left: 230px;
+}
+
+
+.unzercw-iframe {
+	height: 525px;
+	width: 100%;
+	border: none;
+}
+
+.unzercw-widget {
+	width: 100%;
+	border: none;
+}
+
