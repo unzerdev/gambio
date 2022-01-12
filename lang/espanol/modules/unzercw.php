@@ -23,6 +23,7 @@ define("MODULE_PAYMENT_UNZERCW_THE_CAPTURE_ITEM_WITH_SKU_SKU_IS_NOT_PRESENT_IN_T
 define("MODULE_PAYMENT_UNZERCW_THE_HMAC_KEY_AS_DEFINED_IN_THE_LIVE_BACKOFFICE_OF_UNZER_YOU_MAY_NEED_GENERATE_THE_HMAC_KEY_PLEASE_TAKE_A_LOOK_AT_THE_MANUAL_HOW_TO_DO_THIS", "The HMAC key as defined in the live backoffice of Unzer. You may need generate the HMAC key. Please take a look at the manual how to do this.");
 define("MODULE_PAYMENT_UNZERCW_THE_CARD_BRAND_SELECTION_IS_AUTOMATICALLY_DONE_DEPENDING_ON_THE_ENTERED_CARD_NUMBER_IF_NO_JAVASCRIPT_IS_ACTIVE_IN_THE_BROWSER_A_DROP_DOWN_IS_SHOWN_IN_CASE_JAVASCRIPT_A_THE_BRAND_LOGOS_CAN_BE_SHOWN_SHOULD_THE_BRAND_SELECTION_USING_IMAGES", "The card brand selection is automatically done depending on the entered card number. If no Javascript is active in the browser, a drop down is shown. In case JavaScript a the brand logos can be shown. Should the brand selection using images?");
 define("MODULE_PAYMENT_UNZERCW_QUANTITY", "Quantity");
+define("MODULE_PAYMENT_UNZERCW_UNSPECIFIED", "Unspecified");
 define("MODULE_PAYMENT_UNZERCW_THE_AMOUNT_TO_CAPTURE_OF_THIS_TRANSACTION", "Importe a contabilizar para esa transacción");
 define("MODULE_PAYMENT_UNZERCW_A_CAPTURED_TRANSACTION_CANNOT_BE_CANCELLED", "Una transacción contabilizada no puede ser cancelada");
 define("MODULE_PAYMENT_UNZERCW_ORDER", "Order #");
@@ -143,6 +144,7 @@ define("MODULE_PAYMENT_UNZERCW_INFO", "Información");
 define("MODULE_PAYMENT_UNZERCW_CAPTURE_AMOUNT", "Cantidad de captura");
 define("MODULE_PAYMENT_UNZERCW_COMMERCIAL_REGISTER_NUMBER", "Commercial Register Number");
 define("MODULE_PAYMENT_UNZERCW_CANCELLING_AMOUNT_FOR_CHARGE_WITH_ID_ID", "Cancelling @amount for charge with id @id.");
+define("MODULE_PAYMENT_UNZERCW_PLEASE_PAY_THE_AMOUNT_OF_AMOUNT_CURRENCY_USING_THE_FOLLOWING_BANK_DATABRBDESCRIPTORB_DESCRIPTORBRBACCOUNT_HOLDERB_HOLDERBRBIBANB_IBANBRBBICB_BICBR", "Please pay the amount of !amount !currency using the following bank data:<br/><b>Descriptor:</b> !descriptor<br/><b>Account Holder:</b> !holder<br/><b>IBAN:</b> !iban<br/><b>BIC:</b> !bic<br/>");
 define("MODULE_PAYMENT_UNZERCW_PAYMENT_LOGOS", "Logos de pago");
 define("MODULE_PAYMENT_UNZERCW_SOCIAL_SECURITY_NUMBER", "Número de Seguro Social");
 define("MODULE_PAYMENT_UNZERCW_THE_LAYOUT_DOES_NOT_CONTAIN_THE_TAG_LAYOUT_TAG", "La disposición no contiene la etiqueta '!layout_tag'.");
@@ -163,7 +165,6 @@ define("MODULE_PAYMENT_UNZERCW_SEND_CUSTOMER", "Send Customer");
 define("MODULE_PAYMENT_UNZERCW_DINERS_CLUB", "Diners Club");
 define("MODULE_PAYMENT_UNZERCW_TEST_TRANSACTION", "Test Transaction");
 define("MODULE_PAYMENT_UNZERCW_YES", "Sí");
-define("MODULE_PAYMENT_UNZERCW_PLEASE_PAY_THE_AMOUNT_OF_AMOUNT_USING_THE_FOLLOWING_BANK_DATABRBDESCRIPTORB_DESCRIPTORBRBACCOUNT_HOLDERB_HOLDERBRBIBANB_IBANBRBBICB_BICBR", "Please pay the amount of !amount using the following bank data:<br/><b>Descriptor:</b> !descriptor<br/><b>Account Holder:</b> !holder<br/><b>IBAN:</b> !iban<br/><b>BIC:</b> !bic<br/>");
 define("MODULE_PAYMENT_UNZERCW_IF_THE_STATUS_IS_PENDING_IT_IS_UNCLEAR_WHETHER_THE_TRANSACTION_WILL_BE_REFUNDED_SUCCESSFULLY", "Si el estado es pendiente' no está claro si la transacción será devuelto con éxito.");
 define("MODULE_PAYMENT_UNZERCW_YOU_HAVE_TO_ENTER_THE_CVC_CODE_FROM_YOUR_CARD", "Debe introducir el CVC su tarjeta.");
 define("MODULE_PAYMENT_UNZERCW_LIVE_HMAC_KEY", "Live HMAC Key");
@@ -269,7 +270,6 @@ define("MODULE_PAYMENT_UNZERCW_UNZER_TRACE_ID_PROCESSING", "Unzer Trace ID (proc
 define("MODULE_PAYMENT_UNZERCW_TRANSACTION_WAS_CANCELLED_BUT_IS_ALREADY_AUTHORIZED_IN_STORE", "Transaction was cancelled, but is already authorized in store.");
 define("MODULE_PAYMENT_UNZERCW_LABEL_LIVE", "!label (Live)");
 define("MODULE_PAYMENT_UNZERCW_INVOICEID_SCHEMA", "InvoiceID Schema");
-define("MODULE_PAYMENT_UNZERCW_PBY_SIGNING_THIS_MANDATE_FORM_YOU_AUTHORISE_MERCHANTNAME_TO_SEND_INSTRUCTIONS_TO_YOUR_BANK_TO_DEBIT_YOUR_ACCOUNT_AND_YOUR_BANK_TO_DEBIT_YOUR_ACCOUNT_IN_ACCORDANCE_WITH_THE_INSTRUCTIONS_FROM_MERCHANTNAMEPPNOTE_AS_PART_OF_YOUR_RIGHTS_YOU_ARE_ENTITLED_TO_A_REFUND_FROM_YOUR_BANK_UNDER_THE_TERMS_AND_CONDITIONS_OF_YOUR_AGREEMENT_WITH_YOUR_BANK_A_REFUND_MUST_BE_CLAIMED_WITHIN_8_WEEKS_STARTING_FROM_THE_DATE_ON_WHICH_YOUR_ACCOUNT_WAS_DEBITED_YOUR_RIGHTS_REGARDING_THIS_SEPA_MANDATE_ARE_EXPLAINED_IN_A_STATEMENT_THAT_YOU_CAN_OBTAIN_FROM_YOUR_BANKPPIN_CASE_OF_REFUSAL_OR_REJECTION_OF_DIRECT_DEBIT_PAYMENT_I_INSTRUCT_MY_BANK_IRREVOCABLY_TO_INFORM_MERCHANTNAME_OR_ANY_THIRD_PARTY_UPON_REQUEST_ABOUT_MY_NAME_ADDRESS_AND_DATE_OF_BIRTHP", "<p>By signing this mandate form, you authorise @merchantName to send instructions to your bank to debit your account and your bank to debit your account in accordance with the instructions from @merchantName.</p><p>Note: As part of your rights, you are entitled to a refund from your bank under the terms and conditions of your agreement with your bank. A refund must be claimed within 8 weeks starting from the date on which your account was debited. Your rights regarding this SEPA mandate are explained in a statement that you can obtain from your bank.</p>p>In case of refusal or rejection of direct debit payment I instruct my bank irrevocably to inform @merchantName or any third party upon request about my name, address and date of birth.</p>");
 define("MODULE_PAYMENT_UNZERCW_IS_AUTHORIZED", "Está aurorizado");
 define("MODULE_PAYMENT_UNZERCW_ELEMENT_SIZE", "Element Size");
 define("MODULE_PAYMENT_UNZERCW_CREATE_A_RECURRING_PAYMENT_WITH_AN_EXISTING_ALIAS_IS_NOT_SUPPORTED", "Create a recurring payment, with an existing alias is not supported");
@@ -292,7 +292,6 @@ define("MODULE_PAYMENT_UNZERCW_CLOSE_TRANSACTION_FOR_FURTHER_REFUNDS", "Close tr
 define("MODULE_PAYMENT_UNZERCW_TRANSACTION_IN_STATE_PARTIAL_CAPTURE", "Transaction in state partial capture.");
 define("MODULE_PAYMENT_UNZERCW_FAILED_TO_MOVE_FILE_TO_UPLOAD_DIRECOTRY", "Failed to move file to upload direcotry.");
 define("MODULE_PAYMENT_UNZERCW_CANCELLED_STATUS", "Estado cancelado");
-define("MODULE_PAYMENT_UNZERCW_AUTHORIZATION_AMOUNT", "Importe de la autorización");
 define("MODULE_PAYMENT_UNZERCW_TRANSACTION_INFORMATION_OF_TRANSACTION_NUMBER", "Transaction Information of Transaction !number");
 define("MODULE_PAYMENT_UNZERCW_YOU_HAVE_TO_ENTER_THE_NAME_OF_YOUR_BANK", "Usted tiene que introducir el nombre de su banco.");
 define("MODULE_PAYMENT_UNZERCW_CUSTOMER_SUCESSFULLY_RETURNED_FROM_THE_UNZERCW_PAYMENT_PAGE", "Customer sucessfully returned from the UnzerCw payment page.");
@@ -370,6 +369,7 @@ define("MODULE_PAYMENT_UNZERCW_PLEASE_SELECT_THE_DAY_OF_YOUR_BIRTH", "Por favor 
 define("MODULE_PAYMENT_UNZERCW_PAYMENT_INFORMATION", "Condiciones de venta");
 define("MODULE_PAYMENT_UNZERCW_PUBLIC_KEY_FOR_LIVE_REQUESTS_PROVIDED_BY_UNZER", "Public Key for live requests, provided by Unzer.");
 define("MODULE_PAYMENT_UNZERCW_PLEASE_SELECT", "Por favor seleccione");
+define("MODULE_PAYMENT_UNZERCW_AUTHORIZATION_AMOUNT", "Importe de autorisación");
 define("MODULE_PAYMENT_UNZERCW_ENTER_THE_SECTOR_YOUR_COMPANY_OPERATES_IN_EG_FINANCE", "Enter the sector your company operates in, e.g. finance.");
 define("MODULE_PAYMENT_UNZERCW_HERE_YOU_CAN_SET_A_SCHEMA_FOR_THE_ORDERID_PARAMETER_TRANSMITTED_TO_IDENTIFY_THE_PAYMENT_IF_LEFT_EMPTY_IT_IS_NOT_TRANSMITTED_THE_FOLLOWING_PLACEHOLDERS_CAN_BE_USED_OID_FOR_THE_ORDER_ID_WHICH_MAY_NOT_BE_UNIQUE_OR_SET_TID_FOR_THE_SELLXED_TRANSACTION_ID_WHICH_IS_A_UNIQUE_NUMBER_OR_ID_WHICH_CONTAINS_THE_ORDER_ID_AND_IS_GUARANTEED_TO_BE_UNIQUE", "Here you can set a schema for the orderId parameter transmitted to identify the payment. If left empty it is not transmitted. The following placeholders can be used: {oid} for the order id, which may not be unique or set; {tid} for the sellxed transaction id which is a unique number, or {id} which contains the order id and is guaranteed to be unique.");
 define("MODULE_PAYMENT_UNZERCW_WHICH_STATUS_SHOULD_BE_SET_IF_A_PROBLEM_WITH_THE_AUTHORISATION_HAS_OCCURRED_IN_THESE_CASES_YOU_MUST_MANUALLY_VERIFY_IF_THE_CUSTOMER_HAS_BEEN_CHARGED_WITH_THE_AMOUNT", "¿Qué estado quiere establecer cuando se produjo un problema al autorizar? Pedidos en este estado tienen que estar comprobado manualmente si el importe fue contabilizado.");
@@ -496,6 +496,7 @@ define("MODULE_PAYMENT_UNZERCW_YOU_HAVE_TO_ACCEPT_THE_GENERAL_TERMS_AND_CONDITIO
 define("MODULE_PAYMENT_UNZERCW_ACTIVATE", "Activate");
 define("MODULE_PAYMENT_UNZERCW_CAPTURED_STATUS", "Estado contabilizado");
 define("MODULE_PAYMENT_UNZERCW_TRANSACTION_SHOULD_BE_MANUALLY_REVIEWED", "Transaction should be manually reviewed.");
+define("MODULE_PAYMENT_UNZERCW_BANK", "Bank");
 define("MODULE_PAYMENT_UNZERCW_TAX_RATE", "Tax Rate");
 define("MODULE_PAYMENT_UNZERCW_PBY_SIGNING_THIS_MANDATE_FORM_YOU_AUTHORISE_MERCHANTNAME_TO_SEND_INSTRUCTIONS_TO_YOUR_BANK_TO_DEBIT_YOUR_ACCOUNT_AND_YOUR_BANK_TO_DEBIT_YOUR_ACCOUNT_IN_ACCORDANCE_WITH_THE_INSTRUCTIONS_FROM_MERCHANTNAMEPPNOTE_AS_PART_OF_YOUR_RIGHTS_YOU_ARE_ENTITLED_TO_A_REFUND_FROM_YOUR_BANK_UNDER_THE_TERMS_AND_CONDITIONS_OF_YOUR_AGREEMENT_WITH_YOUR_BANK_A_REFUND_MUST_BE_CLAIMED_WITHIN_8_WEEKS_STARTING_FROM_THE_DATE_ON_WHICH_YOUR_ACCOUNT_WAS_DEBITED_YOUR_RIGHTS_REGARDING_THIS_SEPA_MANDATE_ARE_EXPLAINED_IN_A_STATEMENT_THAT_YOU_CAN_OBTAIN_FROM_YOUR_BANKPPIN_CASE_OF_REFUSAL_OR_REJECTION_OF_DIRECT_DEBIT_PAYMENT_I_INSTRUCT_MY_BANK_IRREVOCABLY_TO_INFORM_MERCHANTNAME_OR_ANY_THIRD_PARTY_UPON_REQUEST_ABOUT_MY_NAME_ADDRESS_AND_DATE_OF_BIRTHP", "<p>By signing this mandate form, you authorise @merchantName to send instructions to your bank to debit your account and your bank to debit your account in accordance with the instructions from @merchantName.</p><p>Note: As part of your rights, you are entitled to a refund from your bank under the terms and conditions of your agreement with your bank. A refund must be claimed within 8 weeks starting from the date on which your account was debited. Your rights regarding this SEPA mandate are explained in a statement that you can obtain from your bank.</p><p>In case of refusal or rejection of direct debit payment I instruct my bank irrevocably to inform @merchantName or any third party upon request about my name, address and date of birth.</p>");
 define("MODULE_PAYMENT_UNZERCW_REFUND_AMOUNT", "La cantidad del reembolso");

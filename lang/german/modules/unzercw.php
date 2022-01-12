@@ -123,7 +123,6 @@ define("MODULE_PAYMENT_UNZERCW_THE_TOTAL_REFUND_AMOUNT_TOTALREFUNDEDAMOUNT_CANNO
 define("MODULE_PAYMENT_UNZERCW_PAYMENT_SELECTION_PAGE", "Zahlungsauswahl Page");
 define("MODULE_PAYMENT_UNZERCW_TEST", "Test");
 define("MODULE_PAYMENT_UNZERCW_YES_CLOSE_THE_TRANSACTION", "Ja, Transaktion schliessen");
-define("MODULE_PAYMENT_UNZERCW_PLEASE_PAY_THE_AMOUNT_OF_AMOUNT_USING_THE_FOLLOWING_BANK_DATABRBDESCRIPTORB_DESCRIPTORBRBACCOUNT_HOLDERB_HOLDERBRBIBANB_IBANBRBBICB_BICBR", "Bitte zahlen Sie den Betrag !amount mit folgenden Daten:<br/><b>Beschreibung:</b> !descriptor<br/><b>Kontoinhaber:</b> !holder<br/><b>IBAN:</b> !iban<br/><b>BIC:</b> !bic<br/>");
 define("MODULE_PAYMENT_UNZERCW_TRANSACTION_UNCERTAIN", "Transaktion ist unsicher");
 define("MODULE_PAYMENT_UNZERCW_PLEASE_ENTER_HERE_THE_ACCOUNT_HOLDER_NAME", "Bitte tragen Sie hier den Kontoinhaber ein.");
 define("MODULE_PAYMENT_UNZERCW_VIEW_TRANSACTION", "Transaktion öffnen");
@@ -165,6 +164,7 @@ define("MODULE_PAYMENT_UNZERCW_ENTER_THE_PUBLIC_AND_PRIVATE_KEY_RECEIVED_FROM_UN
 define("MODULE_PAYMENT_UNZERCW_A_CANCELLED_TRANSACTION_CANNOT_BE_AUTHORIZED", "Eine stornierte Transaktion kann nicht autorisiert werden.");
 define("MODULE_PAYMENT_UNZERCW_SHOULD_THE_INVOICE_ITEMS_BE_TRANSMITTED_TO_UNZER_THIS_SLIGHTLY_INCREASES_THE_PROCESSING_TIME_DUE_TO_AN_ADDITIONAL_REQUEST_AND_MAY_CAUSE_ISSUES_FOR_CERTAIN_QUANTITY_PRICE_COMBINATIONS", "Sollen die Rechnungspositionen an Unzer übermittelt werden? Dies kann die Verarbeitungszeit erhöhen und bestimmte Preiskombination können allenfalls nicht verabeitet werden.");
 define("MODULE_PAYMENT_UNZERCW_3D_SECURE_SUCESS", "3D Secure erfolgreich");
+define("MODULE_PAYMENT_UNZERCW_PLEASE_PAY_THE_AMOUNT_OF_AMOUNT_CURRENCY_USING_THE_FOLLOWING_BANK_DATABRBDESCRIPTORB_DESCRIPTORBRBACCOUNT_HOLDERB_HOLDERBRBIBANB_IBANBRBBICB_BICBR", "Bitte zahlen Sie den Betrag !amount !currency mit folgenden Daten:<br/><b>Zahlungsreferenz:</b> !descriptor<br/><b>Kontoinhaber:</b> !holder<br/><b>IBAN:</b> !iban<br/><b>BIC:</b> !bic<br/>");
 define("MODULE_PAYMENT_UNZERCW_TOTAL_REFUND_AMOUNT", "Total gutgeschriebener Betrag");
 define("MODULE_PAYMENT_UNZERCW_OPERATION_MODE", "Betriebsmodus");
 define("MODULE_PAYMENT_UNZERCW_INCLUDE_CSS", "CSS importieren");
@@ -175,6 +175,7 @@ define("MODULE_PAYMENT_UNZERCW_ONLY_AN_UNCERTAIN_TRANSACTION_CAN_BE_MARKED_AS_FI
 define("MODULE_PAYMENT_UNZERCW_BANK_ACCOUNT_NUMBER", "Bankkonto");
 define("MODULE_PAYMENT_UNZERCW_DURING_THE_AUTHORIZATION_ERRORS_MAY_OCCUR_WHEN_AN_ERROR_OCCURS_SHOULD_THE_USER_BE_SENT_TO_THE_PAYMENT_SELECTION_PAGE_OR_SHOULD_THE_USER_BE_SENT_TO_A_SEPARATE_PAGE", "Während der Autorisierung können Fehler auftreten. Falls ein Fehler auftritt, soll der User zur Payment Selection Page oder zu einer separaten Page geschickt werden?");
 define("MODULE_PAYMENT_UNZERCW_TOTAL_AMOUNT_EXCL_TAX", "Total (exkl. MwSt.)");
+define("MODULE_PAYMENT_UNZERCW_BANK", "Anbieter");
 define("MODULE_PAYMENT_UNZERCW_THE_AMOUNT_TO_REFUND_ON_THIS_TRANSACTION", "Zu vergütender Betrag für diese Transaktion");
 define("MODULE_PAYMENT_UNZERCW_TYPE", "Typ");
 define("MODULE_PAYMENT_UNZERCW_THE_TRANSACTION_FAILED_WITH_ERROR_CODE_CODE", "Die Transaktion ist fehlgeschlagen. Fehlermeldung: !code");
@@ -421,6 +422,7 @@ define("MODULE_PAYMENT_UNZERCW_THIS_PASSWORD_IS_USED_FOR_RECURRING_PAYMENTS_AND_
 define("MODULE_PAYMENT_UNZERCW_DEFINE_A_MAXIMAL_ORDER_TOTAL_FOR_THIS_CHECKOUT_TO_BE_AVAILABLE", "Definieren Sie einen Maximalbestellwert für den Checkout.");
 define("MODULE_PAYMENT_UNZERCW_CARD_3DS", "Karten 3-D Secure");
 define("MODULE_PAYMENT_UNZERCW_CREDIT_CARD_BRANDS", "Kreditkartenbrand");
+define("MODULE_PAYMENT_UNZERCW_PBY_SIGNING_THIS_MANDATE_FORM_YOU_AUTHORISE_MERCHANTNAME_TO_SEND_INSTRUCTIONS_TO_YOUR_BANK_TO_DEBIT_YOUR_ACCOUNT_AND_YOUR_BANK_TO_DEBIT_YOUR_ACCOUNT_IN_ACCORDANCE_WITH_THE_INSTRUCTIONS_FROM_MERCHANTNAMEPPNOTE_AS_PART_OF_YOUR_RIGHTS_YOU_ARE_ENTITLED_TO_A_REFUND_FROM_YOUR_BANK_UNDER_THE_TERMS_AND_CONDITIONS_OF_YOUR_AGREEMENT_WITH_YOUR_BANK_A_REFUND_MUST_BE_CLAIMED_WITHIN_8_WEEKS_STARTING_FROM_THE_DATE_ON_WHICH_YOUR_ACCOUNT_WAS_DEBITED_YOUR_RIGHTS_REGARDING_THIS_SEPA_MANDATE_ARE_EXPLAINED_IN_A_STATEMENT_THAT_YOU_CAN_OBTAIN_FROM_YOUR_BANKPPIN_CASE_OF_REFUSAL_OR_REJECTION_OF_DIRECT_DEBIT_PAYMENT_I_INSTRUCT_MY_BANK_IRREVOCABLY_TO_INFORM_MERCHANTNAME_OR_ANY_THIRD_PARTY_UPON_REQUEST_ABOUT_MY_NAME_ADDRESS_AND_DATE_OF_BIRTHP", "<p>Ich ermächtige @merchantName, Zahlungen von meinem Konto mittels SEPA Lastschrift einzuziehen. Zugleich weise ich mein Kreditinstitut an, die von @merchantName auf mein Konto gezogenen SEPA Lastschriften einzulösen.</p><p>Hinweis: Ich kann innerhalb von acht Wochen, beginnend mit dem Belastungsdatum, die Erstattung des belasteten Betrags verlangen. Es gelten dabei die mit meinem Kreditinstitut vereinbarten Bedingungen.</p><p>Für den Fall der Nichteinlösung der Lastschriften oder des Widerspruchs gegen die Lastschriften weise ich meine Bank unwiderruflich an, @merchantName oder Dritten auf Anforderung meinen Namen, Adresse und Geburtsdatum vollständig mitzuteilen.</p>");
 define("MODULE_PAYMENT_UNZERCW_YES_ADD_THE_ADDITIONAL_CSS_FILE", "Ja, zusätzliches CSS File hinzufügen");
 define("MODULE_PAYMENT_UNZERCW_PLEASE_ENTER_HERE_THE_ACCOUNT_HOLDER_NAME_ON_THE_CARD", "Bitte geben Sie den Kontoinhaber an.");
 define("MODULE_PAYMENT_UNZERCW_CAPTURE_AMOUNT", "Buchungsbetrag");
@@ -437,6 +439,7 @@ define("MODULE_PAYMENT_UNZERCW_PENDING_ORDER_TIMEOUT", "Timeout ausstehender Bes
 define("MODULE_PAYMENT_UNZERCW_THE_PAYMENT_METHOD_PAYMENTMETHODNAME_DOES_NOT_SUPPORT_THE_CURRENCY_CURRENCY", "Die Zahlweise '!paymentMethodName' unterstützt die Währung '!currency' nicht.");
 define("MODULE_PAYMENT_UNZERCW_PUBLIC_KEY_FOR_LIVE_REQUESTS_PROVIDED_BY_UNZER", "Dies ist der öffentliche live Schlüssel, der durch Unzer zur Verfügung gestellt wird.");
 define("MODULE_PAYMENT_UNZERCW_BANK_NAME", "Name der Bank");
+define("MODULE_PAYMENT_UNZERCW_UNSPECIFIED", "Keine Angabe");
 define("MODULE_PAYMENT_UNZERCW_PLEASE_ENTER_HERE_THE_CVC_CODE_FROM_YOUR_CARD_YOU_FIND_THE_CODE_ON_THE_BACK_OF_THE_CARD", "Bitte geben Sie hier den CVC Ihrer Karte ein. Sie finden diesen auf der Rückseite Ihrer Kreditkarte.");
 define("MODULE_PAYMENT_UNZERCW_REFUNDED_AMOUNT_REFUNDED_DOES_NOT_EQUAL_CANCELED_AMOUNT_CANCELED_PLEASE_CHECK_IN_YOUR_UNZER_BACKEND", "Der gutgeschriebene Betrag von @refunded stimmt nicht mit dem aufgehobener Betrag von @canceled überein. Bitte prüfen Sie dies im Unzer Backend.");
 define("MODULE_PAYMENT_UNZERCW_SUCCESSFUL", "Erfolgreich");
@@ -460,7 +463,6 @@ define("MODULE_PAYMENT_UNZERCW_UNZER_PAYMENT_ID", "Unzer Zahlungs-ID");
 define("MODULE_PAYMENT_UNZERCW_NEXT_UPDATE_EXECUTION_DATE", "Nächstes Ausführungsdatum für Updates");
 define("MODULE_PAYMENT_UNZERCW_MINIMAL_ORDER_TOTAL", "Minimales Bestelltotal");
 define("MODULE_PAYMENT_UNZERCW_THE_CANCELLATION_COULD_NOT_BE_CONDUCTED_ERROR_CODE_ERROR", "Die Stornierung konnte nicht durchgeführt werden. Fehlercode: !error.");
-define("MODULE_PAYMENT_UNZERCW_PBY_SIGNING_THIS_MANDATE_FORM_YOU_AUTHORISE_MERCHANTNAME_TO_SEND_INSTRUCTIONS_TO_YOUR_BANK_TO_DEBIT_YOUR_ACCOUNT_AND_YOUR_BANK_TO_DEBIT_YOUR_ACCOUNT_IN_ACCORDANCE_WITH_THE_INSTRUCTIONS_FROM_MERCHANTNAMEPPNOTE_AS_PART_OF_YOUR_RIGHTS_YOU_ARE_ENTITLED_TO_A_REFUND_FROM_YOUR_BANK_UNDER_THE_TERMS_AND_CONDITIONS_OF_YOUR_AGREEMENT_WITH_YOUR_BANK_A_REFUND_MUST_BE_CLAIMED_WITHIN_8_WEEKS_STARTING_FROM_THE_DATE_ON_WHICH_YOUR_ACCOUNT_WAS_DEBITED_YOUR_RIGHTS_REGARDING_THIS_SEPA_MANDATE_ARE_EXPLAINED_IN_A_STATEMENT_THAT_YOU_CAN_OBTAIN_FROM_YOUR_BANKPPIN_CASE_OF_REFUSAL_OR_REJECTION_OF_DIRECT_DEBIT_PAYMENT_I_INSTRUCT_MY_BANK_IRREVOCABLY_TO_INFORM_MERCHANTNAME_OR_ANY_THIRD_PARTY_UPON_REQUEST_ABOUT_MY_NAME_ADDRESS_AND_DATE_OF_BIRTHP", "<p>Ich ermächtige @merchantName, Zahlungen von meinem Konto mittels SEPA Lastschrift einzuziehen. Zugleich weise ich mein Kreditinstitut an, die von @merchantName auf mein Konto gezogenen SEPA Lastschriften einzulösen.</p><p>Hinweis: Ich kann innerhalb von acht Wochen, beginnend mit dem Belastungsdatum, die Erstattung des belasteten Betrags verlangen. Es gelten dabei die mit meinem Kreditinstitut vereinbarten Bedingungen.</p><p>Für den Fall der Nichteinlösung der Lastschriften oder des Widerspruchs gegen die Lastschriften weise ich meine Bank unwiderruflich an, @merchantName oder Dritten auf Anforderung meinen Namen, Adresse und Geburtsdatum vollständig mitzuteilen.</p>");
 define("MODULE_PAYMENT_UNZERCW_A_CAPTURED_TRANSACTION_CANNOT_BE_MARKED_AS_FAILED", "Eine verbuchte Transaktion kann nicht als fehlgeschlagen markiert werden.");
 define("MODULE_PAYMENT_UNZERCW_YOU_CAN_SPECIFY_THE_ORDER_STATUS_FOR_ORDERS_THAT_ARE_CAPTURED_EITHER_DIRECTLY_AFTER_THE_ORDER_OR_MANUALLY_IN_THE_BACKEND", "Sie können den Status von Bestellungen definieren, die entwerder direkt nach der Bestellung oder manuell im Backend verbucht werden.");
 define("MODULE_PAYMENT_UNZERCW_YEAR", "Jahr");

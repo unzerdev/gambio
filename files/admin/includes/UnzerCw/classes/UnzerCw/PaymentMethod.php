@@ -18,30 +18,25 @@
  *
  */
 
+require_once 'Customweb/Payment/Authorization/Server/IAdapter.php';
+require_once 'Customweb/Core/Assert.php';
 require_once 'Customweb/Payment/Authorization/PaymentPage/IAdapter.php';
 require_once 'Customweb/Util/Html.php';
 require_once 'Customweb/Core/Util/Serialization.php';
-require_once 'Customweb/Core/Logger/Factory.php';
-require_once 'Customweb/Payment/Authorization/Server/IAdapter.php';
-require_once 'Customweb/Core/Assert.php';
 require_once 'Customweb/Payment/Authorization/IPaymentMethod.php';
-require_once 'Customweb/I18n/Translation.php';
-require_once 'Customweb/Payment/Authorization/Moto/IAdapter.php';
+require_once 'Customweb/Core/Logger/Factory.php';
 
-require_once 'UnzerCw/BackendOrder.php';
-require_once 'UnzerCw/Database.php';
-require_once 'UnzerCw/Entity/Transaction.php';
-require_once 'UnzerCw/TransactionContext.php';
-require_once 'UnzerCw/Compatibility.php';
-require_once 'UnzerCw/OrderContext.php';
-require_once 'UnzerCw/AbstractModule.php';
 require_once 'UnzerCw/Util.php';
-require_once 'UnzerCw/BackendOrderContext.php';
+require_once 'UnzerCw/BackendOrder.php';
+require_once 'UnzerCw/Entity/Transaction.php';
 require_once 'UnzerCw/Log.php';
+require_once 'UnzerCw/TransactionContext.php';
 require_once 'UnzerCw/PaymentMethodWrapper.php';
 require_once 'UnzerCw/ConfigurationTableAdapter.php';
 require_once 'UnzerCw/CheckoutPaymentFormRenderer.php';
+require_once 'UnzerCw/OrderContext.php';
 require_once 'UnzerCw/ConfigurationAdapter.php';
+require_once 'UnzerCw/AbstractModule.php';
 require_once 'UnzerCw/Entity/Util.php';
 
 
@@ -108,41 +103,6 @@ abstract class UnzerCw_PaymentMethod extends UnzerCw_AbstractModule implements C
 		// Prevent warnings when those constants are expected.
 		define($this->getConstantPrefix() . strtoupper($this->getCode()) . '_ALLOWED_TITLE', $this->getPaymentMethodDisplayName());
 		define($this->getConstantPrefix() . strtoupper($this->getCode()) . '_ALLOWED_DESC', $this->getPaymentMethodDisplayName());
-
-
-		if (isset($_GET['oID']) && isset($_GET['edit_action']) && $_GET['edit_action'] == 'other') {
-			$this->updateMotoPaymentLink($_GET['oID']);
-		}
-
-	}
-
-	protected function updateMotoPaymentLink($orderId) {
-		
-	}
-
-	public function writeTransactionLinkToOrder(UnzerCw_Entity_Transaction $dbTransaction) {
-
-		$orderId = intval($dbTransaction->getOrderId());
-		if ($orderId <= 0) {
-			throw new Exception("The given database transaction has no order id, hence the transaction link could not be updated.");
-		}
-
-		$content = $this->getPaymentMethodDisplayName() . ' (';
-		$content .= UnzerCw_Util::renderBackendPopupWindow(
-			$dbTransaction->getTransactionId(),
-			'TransactionManagement',
-			'edit',
-			array('transaction_id' => $dbTransaction->getTransactionId()),
-			false
-		);
-		$content .= ')';
-
-		try {
-			UnzerCw_Compatibility::writeBackendLink($dbTransaction->getOrderId(), $content);
-		}
-		catch(Exception $e) {
-			// we ignore this because it does not affect anything.
-		}
 	}
 
 	protected function setFormActionUrl() {
@@ -275,9 +235,6 @@ abstract class UnzerCw_PaymentMethod extends UnzerCw_AbstractModule implements C
 		$transaction->setCustomerId($customerId);
 		$transaction->setPaymentClass(get_class($this));
 		UnzerCw_Entity_Util::persist($transaction);
-		if(UnzerCw_Compatibility::isModifiedShop()){
-			$_SESSION['unzercw']['transaction_id'] = $transaction->getTransactionId();
-		}
 
 		return $transaction;
 	}
@@ -779,13 +736,6 @@ abstract class UnzerCw_PaymentMethod extends UnzerCw_AbstractModule implements C
 		$orderContext = $this->getOrderContext();
 		$adapter = $this->getAdapterFactory()->getAuthorizationAdapterByContext($orderContext);
 		$shopAdapter = UnzerCw_Util::getShopAdapterByPaymentAdapter($adapter);
-		if (UnzerCw_Compatibility::isModifiedShop()) {
-			$css = '';
-			if ($this->getConfigurationAdapter()->getConfigurationValue('include_css') == 'yes') {
-				$css .= $this->getCssHtmlCode();
-			}
-			return $css . $shopAdapter->getCheckoutForm($orderContext, $this);
-		}
 		//Removed html entities encoding. Fixes as metntion in ticket: 2017072515472003521 (Gambio3)
 		return	$shopAdapter->getCheckoutForm($orderContext, $this);
 
@@ -891,45 +841,12 @@ abstract class UnzerCw_PaymentMethod extends UnzerCw_AbstractModule implements C
 
 
 	public function isAliasManagerActive() {
-
 		
 		return false;
 
 	}
 	
-	protected function loadModifiedSuccessTransaction() {
-		if(isset($_SESSION['unzercw']) && isset($_SESSION['unzercw']['transaction_id'])) {
-			$transactionId = (int) $_SESSION['unzercw']['transaction_id'];
-			$th = UnzerCw_Util::getTransactionHandler();
-			try {
-				$transaction = $th->findTransactionByTransactionId($transactionId);
-				if(isset($_SESSION['customer_id']) && $transaction->getTransactionContext()->getOrderContext()->getCustomerId() == $_SESSION['customer_id']) {
-					return $transaction;
-				}
-			}
-			catch(Exception $e) {
-			}
-		}
-		return null;
-	}
-	
 	public function success(){
-		if (UnzerCw_Compatibility::isModifiedShop()) {
-			$transaction = $this->loadModifiedSuccessTransaction();
-			if ($transaction && $transaction->getPaymentInformation()) {
-				return array(
-					array(
-						"title" => "Unzer",
-						"fields" => array(
-							array(
-								"title" => Customweb_I18n_Translation::__("Payment Information")->toString(),
-								"field" => $transaction->getPaymentInformation()
-							)
-						)
-					)
-				);
-			}
-		}
 		if (is_callable('parent::success')) {
 			return parent::success();
 		}

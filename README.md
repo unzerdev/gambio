@@ -8,23 +8,23 @@ General information on our API can be found in our [API Documentation](https://d
    
 
 ## Payment types supported by this plugin are
-*   Card (credit card and debit card)
-*   PayPal
-*   SOFORT
-*   Giropay
-*   Prepayment
-*   Unzer Instalment secured
-*   SEPA direct debit
-*   Unzer Direct Debit secured
-*   Invoice
-*   Unzer Invoice secured
-*   Przelewy24
 *   Alipay
-*   WeChat Pay
 *   Bancontact
-*   Unzer Bank Transfer
+*   Card (credit card and debit card)
 *   EPS
+*   Giropay
 *   iDEAL
+*   Invoice
+*   PayPal
+*   Prepayment
+*   Przelewy24
+*   SEPA direct debit
+*   SOFORT
+*   Unzer Bank Transfer
+*   Unzer Direct Debit secured
+*   Unzer Instalment secured
+*   Unzer Invoice secured
+*   WeChat Pay
 
 ## Support
 For any issues or questions please get in touch with our support team.

@@ -61,14 +61,14 @@ class UnzerCw_BackendOrder {
 			'shipping_method' => ((substr($shipping_method['title'], -1) == ':') ? substr(strip_tags($shipping_method['title']), 0, -1) : strip_tags($shipping_method['title'])),
 			'comments' => $order['comments']
 		);
-
+		$houseNr = isset($order['customers_house_number']) ? ' ' . $order['customers_house_number'] : '';
 		$this->customer = array('id' => $order['customers_id'],
 			'name' => $order['customers_name'],
 			'firstname' => $order['customers_firstname'],
 			'lastname' => $order['customers_lastname'],
 			'csID' => $order['customers_cid'],
 			'company' => $order['customers_company'],
-			'street_address' => $order['customers_street_address'],
+			'street_address' => $order['customers_street_address'] . $houseNr,
 			'suburb' => $order['customers_suburb'],
 			'city' => $order['customers_city'],
 			'postcode' => $order['customers_postcode'],
@@ -77,12 +77,12 @@ class UnzerCw_BackendOrder {
 			'format_id' => $order['customers_address_format_id'],
 			'telephone' => $order['customers_telephone'],
 			'email_address' => $order['customers_email_address']);
-
+		$houseNr = isset($order['delivery_house_number']) ? ' ' . $order['delivery_house_number'] : '';
 		$this->delivery = array('name' => $order['delivery_name'],
 			'firstname' => $order['delivery_firstname'],
 			'lastname' => $order['delivery_lastname'],
 			'company' => $order['delivery_company'],
-			'street_address' => $order['delivery_street_address'],
+			'street_address' => $order['delivery_street_address'] . $houseNr,
 			'suburb' => $order['delivery_suburb'],
 			'city' => $order['delivery_city'],
 			'postcode' => $order['delivery_postcode'],
@@ -94,11 +94,12 @@ class UnzerCw_BackendOrder {
 			$this->delivery = false;
 		}
 
+		$houseNr = isset($order['billing_house_number']) ? ' ' . $order['billing_house_number'] : '';
 		$this->billing = array('name' => $order['billing_name'],
 			'firstname' => $order['billing_firstname'],
 			'lastname' => $order['billing_lastname'],
 			'company' => $order['billing_company'],
-			'street_address' => $order['billing_street_address'],
+			'street_address' => $order['billing_street_address'] . $houseNr,
 			'suburb' => $order['billing_suburb'],
 			'city' => $order['billing_city'],
 			'postcode' => $order['billing_postcode'],

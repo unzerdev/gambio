@@ -437,7 +437,8 @@ class UnzerCw_OrderContext extends Customweb_Payment_Authorization_OrderContext_
 	}
 
 	public function getBillingStreet(){
-		return UnzerCw_Util::decode($this->order['billing']['street_address']);
+		$houseNr = isset($this->order['billing']['house_number']) ? " " . $this->order['billing']['house_number'] : "";
+		return UnzerCw_Util::decode($this->order['billing']['street_address'] . $houseNr);
 	}
 
 	public function getBillingCity(){
@@ -536,7 +537,8 @@ class UnzerCw_OrderContext extends Customweb_Payment_Authorization_OrderContext_
 	}
 
 	public function getShippingStreet(){
-		return UnzerCw_Util::decode($this->order['delivery']['street_address']);
+		$houseNr = isset($this->order['delivery']['house_number']) ? " " . $this->order['delivery']['house_number'] : "";
+		return UnzerCw_Util::decode($this->order['delivery']['street_address'] . $houseNr);
 	}
 
 	public function getShippingCity(){

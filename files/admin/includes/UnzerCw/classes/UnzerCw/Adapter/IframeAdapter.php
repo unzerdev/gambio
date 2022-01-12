@@ -52,14 +52,9 @@ class UnzerCw_Adapter_IframeAdapter extends UnzerCw_Adapter_AbstractAdapter
 		$dbTransaction = $paymentMethod->newDatabaseTransaction();
 		$transaction = $this->getInterfaceAdapter()->createTransaction($paymentMethod->getTransactionContext($dbTransaction, null, $paymentMethod->getAliasTransactionId()), null);
 		$dbTransaction->setTransactionObject($transaction);
-		if (UnzerCw_ConfigurationAdapter::isPendingOrderModeActive()) {
-			$paymentMethod->writeTransactionLinkToOrder($dbTransaction);
-		}
-		
 		UnzerCw_Entity_Util::persist($dbTransaction);
 		$params = array_merge($formData, array('cw_transaction_id' => $dbTransaction->getTransactionId()));
 		return UnzerCw_Util::getFrontendUrl('unzercw_iframe.php', $params, true);
-		
 	}
 	
 	public function getCheckoutForm(UnzerCw_OrderContext $orderContext, UnzerCw_PaymentMethod $paymentMethod) {

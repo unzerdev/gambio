@@ -98,9 +98,6 @@ class UnzerCw_Adapter_ServerAdapter extends UnzerCw_Adapter_AbstractAdapter
 		$_REQUEST['cw_transaction_id'] = $dbTransaction->getTransactionId();
 		$transaction = $this->getInterfaceAdapter()->createTransaction($paymentMethod->getTransactionContext($dbTransaction, null, $paymentMethod->getAliasTransactionId()), null);
 		$dbTransaction->setTransactionObject($transaction);
-		if (UnzerCw_ConfigurationAdapter::isPendingOrderModeActive()) {
-			$paymentMethod->writeTransactionLinkToOrder($dbTransaction);
-		}
 		UnzerCw_Entity_Util::persist($dbTransaction);
 	
 		$formData = $paymentMethod->getFormData();

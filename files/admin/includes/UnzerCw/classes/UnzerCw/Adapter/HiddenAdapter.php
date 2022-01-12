@@ -98,11 +98,7 @@ class UnzerCw_Adapter_HiddenAdapter extends UnzerCw_Adapter_AbstractAdapter
 		$dbTransaction = $paymentMethod->newDatabaseTransaction();
 		$transaction = $this->getInterfaceAdapter()->createTransaction($paymentMethod->getTransactionContext($dbTransaction, null, $paymentMethod->getAliasTransactionId()), null);
 		$dbTransaction->setTransactionObject($transaction);
-		if (UnzerCw_ConfigurationAdapter::isPendingOrderModeActive()) {
-			$paymentMethod->writeTransactionLinkToOrder($dbTransaction);
-		}
 		UnzerCw_Entity_Util::persist($dbTransaction);
-		
 		
 		if (isset($_GET['ajax'])) {
 			$data = array(

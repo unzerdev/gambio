@@ -103,8 +103,7 @@ abstract class UnzerCw_AbstractModule {
 		$catalogPath = dirname(dirname(dirname(dirname(dirname(dirname(__FILE__))))));
 		$className = str_replace("/", "_", $className);
 		if ($className == 'unzercw') {
-					require_once $catalogPath . '/admin/includes/modules/export/unzercw.php';
-		}
+			require_once $catalogPath . '/admin/includes/modules/export/unzercw.php';		}
 		else {
 			$path = $catalogPath . '/includes/modules/payment/' . strtolower($className) . '.php';
 			if (file_exists($path)) {
@@ -295,21 +294,21 @@ abstract class UnzerCw_AbstractModule {
 		$this->executeQuery("ALTER TABLE " . TABLE_ORDERS . " CHANGE `cc_type`  `cc_type` TEXT");
 		$this->executeQuery("ALTER TABLE " . TABLE_ORDERS . " CHANGE `payment_method`  `payment_method` VARCHAR( 128 )");
 
-				// Modify cc type field, to allow more content in it
+		// Modify cc type field, to allow more content in it
 		UnzerCw_Database::query("ALTER TABLE  " . TABLE_ORDERS . " CHANGE  `cc_type`  `cc_type` TEXT NULL DEFAULT NULL");
 		UnzerCw_Database::query("ALTER TABLE  " . TABLE_ORDERS . " CHANGE  `cc_expires`  `cc_expires` TEXT NULL DEFAULT NULL");
-		
-		// Insert Access Informations:
-		$rs = UnzerCw_Database::query("SELECT * FROM " . TABLE_ADMIN_ACCESS . " LIMIT 0,1");
-		$row = UnzerCw_Database::fetch($rs);
-		if (!isset($row['unzercw']))
-		{
-			UnzerCw_Database::query("ALTER TABLE " . TABLE_ADMIN_ACCESS . " ADD `unzercw` INT( 1 ) NOT NULL DEFAULT '0'");
+
+		if(defined('TABLE_ADMIN_ACCESS')) {
+			// Insert Access Informations:
+			$rs  = UnzerCw_Database::query("SELECT * FROM " . TABLE_ADMIN_ACCESS . " LIMIT 0,1");
+			$row = UnzerCw_Database::fetch($rs);
+			if (!isset($row['unzercw'])) {
+				UnzerCw_Database::query("ALTER TABLE " . TABLE_ADMIN_ACCESS . " ADD `unzercw` INT( 1 ) NOT NULL DEFAULT '0'");
+			}
+			UnzerCw_Database::query("UPDATE " . TABLE_ADMIN_ACCESS . " SET `unzercw` = '1' WHERE `customers_id` = '" . $_SESSION['customer_id'] . "'");
+
+			UnzerCw_Database::query("UPDATE " . TABLE_ADMIN_ACCESS . " SET `unzercw` = '1' WHERE `customers_id` = '1'");
 		}
-		UnzerCw_Database::query("UPDATE " . TABLE_ADMIN_ACCESS . " SET `unzercw` = '1' WHERE `customers_id` = '" . $_SESSION['customer_id'] . "'");
-		
-		UnzerCw_Database::query("UPDATE " . TABLE_ADMIN_ACCESS . " SET `unzercw` = '1' WHERE `customers_id` = '1'");
-		
 	}
 
 	private function executeQuery($query) {
