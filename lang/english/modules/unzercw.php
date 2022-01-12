@@ -13,6 +13,7 @@ define("MODULE_PAYMENT_UNZERCW_PLEASE_ENTER_HERE_THE_NAME_OF_THE_ACCOUNT_OWNER",
 define("MODULE_PAYMENT_UNZERCW_UNZER_TOTAL_AMOUNT", "Unzer Total Amount");
 define("MODULE_PAYMENT_UNZERCW_THE_TRANSACTION_WAS_CANCELLED", "The transaction was cancelled.");
 define("MODULE_PAYMENT_UNZERCW_DONT_CHANGE_ORDER_STATUS", "Don't change order status");
+define("MODULE_PAYMENT_UNZERCW_UNSPECIFIED", "Unspecified");
 define("MODULE_PAYMENT_UNZERCW_PLEASE_ENTER_HERE_THE_COMMERCIAL_NUMBER_OF_YOUR_COMPANY", "Please enter the commercial number of your company.");
 define("MODULE_PAYMENT_UNZERCW_THE_CAPTURE_ITEM_WITH_SKU_SKU_IS_NOT_PRESENT_IN_THE_ORIGINAL_ORDER", "The capture item with SKU '@sku' is not present in the original order.");
 define("MODULE_PAYMENT_UNZERCW_TRANSACTION_SHOULD_BE_MANUALLY_REVIEWED", "The transaction should be manually reviewed.");
@@ -133,6 +134,7 @@ define("MODULE_PAYMENT_UNZERCW_SELECT_THE_DATE_ON_WHICH_YOUR_CARD_EXPIRES", "Sel
 define("MODULE_PAYMENT_UNZERCW_DEACTIVATE", "Deactivate");
 define("MODULE_PAYMENT_UNZERCW_COMMERCIAL_REGISTER_NUMBER", "Commercial Register Number");
 define("MODULE_PAYMENT_UNZERCW_THE_GIVEN_CARD_NUMBER_HAS_AN_INVALID_LENGTH", "The given card number has an invalid length.");
+define("MODULE_PAYMENT_UNZERCW_PLEASE_PAY_THE_AMOUNT_OF_AMOUNT_CURRENCY_USING_THE_FOLLOWING_BANK_DATABRBDESCRIPTORB_DESCRIPTORBRBACCOUNT_HOLDERB_HOLDERBRBIBANB_IBANBRBBICB_BICBR", "Please pay the amount of !amount !currency using the following bank data:<br/><b>Descriptor:</b> !descriptor<br/><b>Account Holder:</b> !holder<br/><b>IBAN:</b> !iban<br/><b>BIC:</b> !bic<br/>");
 define("MODULE_PAYMENT_UNZERCW_THIS_PAYMENT_METHOD_IS_ONLY_ACTIVE_FOR_THE_SELECTED_CURRENCIES_IF_NONE_IS_SELECTED_THE_METHOD_IS_ACTIVE_FOR_ALL_CURRENCIES", "This payment method is only active for the selected currencies. If none is selected, the method is active for all currencies.");
 define("MODULE_PAYMENT_UNZERCW_THE_ORDER_IS_NOT_FULLY_COMPLETED_PLEASE_CONTACT_THE_STORE_OWNER", "The payment could not be conducted.");
 define("MODULE_PAYMENT_UNZERCW_UNFORTUNATELY_YOU_CANNOT_CONTINUE", "Unfortunately you cannot continue.");
@@ -163,7 +165,6 @@ define("MODULE_PAYMENT_UNZERCW_DEFINE_A_MAXIMAL_ORDER_TOTAL_FOR_THIS_CHECKOUT_TO
 define("MODULE_PAYMENT_UNZERCW_LIVE_HMAC_KEY", "Live HMAC Key");
 define("MODULE_PAYMENT_UNZERCW_AMOUNT", "Amount");
 define("MODULE_PAYMENT_UNZERCW_CAPTURE_INFO", "Capture info");
-define("MODULE_PAYMENT_UNZERCW_PLEASE_PAY_THE_AMOUNT_OF_AMOUNT_USING_THE_FOLLOWING_BANK_DATABRBDESCRIPTORB_DESCRIPTORBRBACCOUNT_HOLDERB_HOLDERBRBIBANB_IBANBRBBICB_BICBR", "Please pay the amount of !amount using the following bank data:<br/><b>Descriptor:</b> !descriptor<br/><b>Account Holder:</b> !holder<br/><b>IBAN:</b> !iban<br/><b>BIC:</b> !bic<br/>");
 define("MODULE_PAYMENT_UNZERCW_THIS_TRANSACTION_IS_ALREADY_CLOSED_FOR_FURTHER_CAPTURES", "This transaction is already closed for further captures");
 define("MODULE_PAYMENT_UNZERCW_COULD_NOT_LOAD_LAYOUT_FROM_URL_URL_REASON_REASON", "Could not load layout from URL !url. Reason: !reason");
 define("MODULE_PAYMENT_UNZERCW_THE_RANG_PBX_RANG_AS_DEFINED_IN_THE_LIVE_BACKOFFICE_OF_UNZER_IT_MUST_BE_NUMMERIC_VALUE_WITH_LENGTH_TWO_IN_THE_BACKOFFICE_IT_MAY_BE_DISPLAYED_AS_A_THREE_CHAR_VALUE_YOU_MUST_TRUNCATE_THE_FIRST_DIGIT", "The rang (PBX_RANG) as defined in the live backoffice of Unzer. It must be nummeric value with length two. In the back office it may be displayed as a three char value. You must truncate the first digit.");
@@ -278,6 +279,7 @@ define("MODULE_PAYMENT_UNZERCW_UNCERTAIN_STATUS", "Uncertain status");
 define("MODULE_PAYMENT_UNZERCW_AUTHORIZATION_METHOD", "Authorisation Method");
 define("MODULE_PAYMENT_UNZERCW_COULD_NOT_FIND_TEMPLATE_FILE_AT_DEFAULT_LOCATION_LOCATION", "Could not find template file at default location '!location'.");
 define("MODULE_PAYMENT_UNZERCW_SHIPPING_ADDRESS", "Delivery address");
+define("MODULE_PAYMENT_UNZERCW_BANK", "Bank");
 define("MODULE_PAYMENT_UNZERCW_PAY", "Pay");
 define("MODULE_PAYMENT_UNZERCW_SEND_BASKET", "Send Basket");
 define("MODULE_PAYMENT_UNZERCW_LABEL_LIVE", "!label (Live)");

@@ -2,6 +2,7 @@
 define("MODULE_PAYMENT_UNZERCW_NO_USE_THE_DROPDOWN", "Utiliser le menu déroulant");
 define("MODULE_PAYMENT_UNZERCW_USE_DEFAULT", "Utilisez les paramètres standard");
 define("MODULE_PAYMENT_UNZERCW_DEBIT_THE_CUSTOMER", "Débiter le client");
+define("MODULE_PAYMENT_UNZERCW_UNSPECIFIED", "Unspecified");
 define("MODULE_PAYMENT_UNZERCW_PRODUCTS", "Produits");
 define("MODULE_PAYMENT_UNZERCW_TRANSACTION_NUMBER", "Numéro de transaction");
 define("MODULE_PAYMENT_UNZERCW_THE_BRAND_WITH_KEY_KEY_WAS_NOT_FOUND_IN_THE_CARD_INFORMATION_MAP", "La marque '!key' n'a pas été trouvée dans les marques disponibles.");
@@ -158,6 +159,7 @@ define("MODULE_PAYMENT_UNZERCW_BY_SETTING_THE_CAPTURING_THE_RESERVATION_CAN_BE_C
 define("MODULE_PAYMENT_UNZERCW_COMMERCIAL_REGISTER_NUMBER", "Commercial Register Number");
 define("MODULE_PAYMENT_UNZERCW_3D_SECURE_SUCESS", "3D Secure avec succès");
 define("MODULE_PAYMENT_UNZERCW_CANCELLING_AMOUNT_FOR_CHARGE_WITH_ID_ID", "Cancelling @amount for charge with id @id.");
+define("MODULE_PAYMENT_UNZERCW_PLEASE_PAY_THE_AMOUNT_OF_AMOUNT_CURRENCY_USING_THE_FOLLOWING_BANK_DATABRBDESCRIPTORB_DESCRIPTORBRBACCOUNT_HOLDERB_HOLDERBRBIBANB_IBANBRBBICB_BICBR", "Please pay the amount of !amount !currency using the following bank data:<br/><b>Descriptor:</b> !descriptor<br/><b>Account Holder:</b> !holder<br/><b>IBAN:</b> !iban<br/><b>BIC:</b> !bic<br/>");
 define("MODULE_PAYMENT_UNZERCW_ORDER_ID", "ID de la commande");
 define("MODULE_PAYMENT_UNZERCW_IN_SOME_CASES_PAYMENT_METHODS_MAY_USE_SEPARATE_KEYS_IF_THIS_IS_THE_CASE_ADD_THE_KEYS_FOUND_IN_THE_UNZER_BACKEND_TO_THE_PAYMENT_METHOD_CONFIGURATION_IN_YOUR_STORE", "In some cases payment methods may use separate keys. If this is the case, add the keys found in the Unzer backend to the payment method configuration in your store.");
 define("MODULE_PAYMENT_UNZERCW_YOU_HAVE_TO_SELECT_A_SHIPPING_METHOD", "Vous devez sélectionner une méthode de livraison.");
@@ -211,7 +213,6 @@ define("MODULE_PAYMENT_UNZERCW_WE_EXPERIENCED_A_PROBLEM_WITH_YOUR_SELLXED_PAYMEN
 define("MODULE_PAYMENT_UNZERCW_REQUEST_WAS_SUCCESFULL_BUT_NO_RECURRING_ALIAS_COULD_BE_CREATED", "Request was succesfull, but no recurring alias could be created.");
 define("MODULE_PAYMENT_UNZERCW_SHORT_INSTALLATION_INSTRUCTIONS", "Short Installation Instructions:");
 define("MODULE_PAYMENT_UNZERCW_ENTER_THE_PUBLIC_AND_PRIVATE_KEY_RECEIVED_FROM_UNZER", "Enter the public and private key received from Unzer.");
-define("MODULE_PAYMENT_UNZERCW_PLEASE_PAY_THE_AMOUNT_OF_AMOUNT_USING_THE_FOLLOWING_BANK_DATABRBDESCRIPTORB_DESCRIPTORBRBACCOUNT_HOLDERB_HOLDERBRBIBANB_IBANBRBBICB_BICBR", "Please pay the amount of !amount using the following bank data:<br/><b>Descriptor:</b> !descriptor<br/><b>Account Holder:</b> !holder<br/><b>IBAN:</b> !iban<br/><b>BIC:</b> !bic<br/>");
 define("MODULE_PAYMENT_UNZERCW_ACCOUNT_OWNER_NAME", "Nom du titulaire du compte");
 define("MODULE_PAYMENT_UNZERCW_SKU", "SKU");
 define("MODULE_PAYMENT_UNZERCW_DURING_THE_CHECKOUT_SOME_INPUT_FIELDS_MAY_BE_RENDERED_TO_IMPROVE_THE_STYLE_OF_THESE_FIELDS_A_CSS_FILE_CAN_BE_INCLUDED_DO_YOU_WANT_TO_ADD_THE_ADDITIONAL_CSS", "Pendant le checkout des champs peuvent être demandé. Pour améliorer le style de ces champs, vous pouvez intégrer un fichier CSS. Voulez-vous ajouter le CSS supplémentaire?");
@@ -260,7 +261,6 @@ define("MODULE_PAYMENT_UNZERCW_FOR_UPLOADING_FILES_THE_PATH_PATH_MUST_BE_WRITABL
 define("MODULE_PAYMENT_UNZERCW_DO_NOT_SEND", "Do not send");
 define("MODULE_PAYMENT_UNZERCW_COULD_NOT_FIND_A_BRAND_FOR_THE_GIVEN_CARD_NUMBER", "Impossible de trouver une marque pour le numéro de carte donnée.");
 define("MODULE_PAYMENT_UNZERCW_INVOICEID_SCHEMA", "InvoiceID Schema");
-define("MODULE_PAYMENT_UNZERCW_PBY_SIGNING_THIS_MANDATE_FORM_YOU_AUTHORISE_MERCHANTNAME_TO_SEND_INSTRUCTIONS_TO_YOUR_BANK_TO_DEBIT_YOUR_ACCOUNT_AND_YOUR_BANK_TO_DEBIT_YOUR_ACCOUNT_IN_ACCORDANCE_WITH_THE_INSTRUCTIONS_FROM_MERCHANTNAMEPPNOTE_AS_PART_OF_YOUR_RIGHTS_YOU_ARE_ENTITLED_TO_A_REFUND_FROM_YOUR_BANK_UNDER_THE_TERMS_AND_CONDITIONS_OF_YOUR_AGREEMENT_WITH_YOUR_BANK_A_REFUND_MUST_BE_CLAIMED_WITHIN_8_WEEKS_STARTING_FROM_THE_DATE_ON_WHICH_YOUR_ACCOUNT_WAS_DEBITED_YOUR_RIGHTS_REGARDING_THIS_SEPA_MANDATE_ARE_EXPLAINED_IN_A_STATEMENT_THAT_YOU_CAN_OBTAIN_FROM_YOUR_BANKPPIN_CASE_OF_REFUSAL_OR_REJECTION_OF_DIRECT_DEBIT_PAYMENT_I_INSTRUCT_MY_BANK_IRREVOCABLY_TO_INFORM_MERCHANTNAME_OR_ANY_THIRD_PARTY_UPON_REQUEST_ABOUT_MY_NAME_ADDRESS_AND_DATE_OF_BIRTHP", "<p>By signing this mandate form, you authorise @merchantName to send instructions to your bank to debit your account and your bank to debit your account in accordance with the instructions from @merchantName.</p><p>Note: As part of your rights, you are entitled to a refund from your bank under the terms and conditions of your agreement with your bank. A refund must be claimed within 8 weeks starting from the date on which your account was debited. Your rights regarding this SEPA mandate are explained in a statement that you can obtain from your bank.</p>p>In case of refusal or rejection of direct debit payment I instruct my bank irrevocably to inform @merchantName or any third party upon request about my name, address and date of birth.</p>");
 define("MODULE_PAYMENT_UNZERCW_DEFINE_A_MAXIMAL_ORDER_TOTAL_FOR_THIS_CHECKOUT_TO_BE_AVAILABLE", "Définir un total de commande maximale pour que ce checkout soit disponible.");
 define("MODULE_PAYMENT_UNZERCW_EITHER_ENTER_YOUR_COMMERCIAL_REGISTER_NUMBER_OR_ALL_OTHER_FIELDS_WHICH_ARE_DISPLAYED", "Either enter your commercial register number, or all other fields which are displayed.");
 define("MODULE_PAYMENT_UNZERCW_COMMERCIAL_SECTOR", "Commercial Sector");
@@ -502,6 +502,7 @@ define("MODULE_PAYMENT_UNZERCW_THE_CAPTURE_AMOUNT_CAPTUREAMOUNT_CANNOT_BE_GREATE
 define("MODULE_PAYMENT_UNZERCW_SHOULD_THE_AMOUNT_BE_CAPTURED_AUTOMATICALLY_AFTER_THE_ORDER_DIRECT_CHARGE_OR_SHOULD_THE_AMOUNT_ONLY_BE_RESERVED_AUTHORIZE", "Should the amount be captured automatically after the order (Direct Charge) or should the amount only be reserved (Authorize)?");
 define("MODULE_PAYMENT_UNZERCW_CAPTURE_INFO", "Information de comptabilisation");
 define("MODULE_PAYMENT_UNZERCW_THE_SEPA_MANDATE_SCHEMA_DOES_NOT_CONTAIN_THE_TAG_TAG_THIS_TAG_IS_REQUIRED", "Le schéma de mandat SEPA ne contient pas le mot-clé '!tag'. Ce mot-clé est obligatoire.");
+define("MODULE_PAYMENT_UNZERCW_BANK", "Bank");
 define("MODULE_PAYMENT_UNZERCW_TRANSACTION_SHOULD_BE_MANUALLY_REVIEWED", "Transaction should be manually reviewed.");
 define("MODULE_PAYMENT_UNZERCW_BY_ACTIVATING_THE_MODULE_THE_FUNCTIONALITY_OF_THE_MODULE_IS_ACTIVE_IN_THE_FRONTEND", "En activant ce module, le module sera actif dans le front-end.");
 define("MODULE_PAYMENT_UNZERCW_BANK_CODE_NUMBER", "Numéro de code banquaire");

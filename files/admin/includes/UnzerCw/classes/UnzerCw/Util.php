@@ -196,28 +196,6 @@ final class UnzerCw_Util {
 		require_once $dir . $methodClass . '.php';
 	}
 
-	public static function getAllPaymentMethods() {
-		if (self::$allMethods === null) {
-			self::$allMethods = array();
-			$dirName = dirname(dirname(dirname(dirname(dirname(dirname(__FILE__)))))) . '/includes/modules/payment/';
-			if ($handle = opendir($dirName)) {
-				while (false !== ($file = readdir($handle))) {
-					$filePath = $dirName . $file;
-					if ($file != "." && $file != ".." && !is_dir($filePath) && substr($file, -4) === '.php' && strpos($file, 'unzercw_') === 0) {
-						$className = substr($file, 0, -4);
-						self::$allMethods[] = UnzerCw_AbstractModule::getModulInstanceByClass($className);
-					}
-				}
-				closedir($handle);
-			}
-			else {
-				throw new Exception("Unable to read external checkout directory.");
-			}
-		}
-
-		return self::$allMethods;
-	}
-
 	public static function getFrontendUrl($file, $params = array(), $ssl = true) {
 
 		$server = HTTP_SERVER;

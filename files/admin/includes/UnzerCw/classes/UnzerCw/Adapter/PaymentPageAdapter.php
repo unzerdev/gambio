@@ -70,10 +70,6 @@ class UnzerCw_Adapter_PaymentPageAdapter extends UnzerCw_Adapter_AbstractAdapter
 		$dbTransaction = $paymentMethod->newDatabaseTransaction();
 		$transaction = $this->getInterfaceAdapter()->createTransaction($paymentMethod->getTransactionContext($dbTransaction, null, $paymentMethod->getAliasTransactionId()), null);
 		$dbTransaction->setTransactionObject($transaction);
-		if (UnzerCw_ConfigurationAdapter::isPendingOrderModeActive()) {
-			$paymentMethod->writeTransactionLinkToOrder($dbTransaction);
-		}
-		
 		UnzerCw_Entity_Util::persist($dbTransaction);
 		if ($forceform == false && $this->getInterfaceAdapter()->isHeaderRedirectionSupported($transaction, $formData)) {
 			$url = $this->getInterfaceAdapter()->getRedirectionUrl($transaction, $formData);

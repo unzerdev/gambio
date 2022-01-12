@@ -23,38 +23,7 @@ require_once 'Customweb/Database/Migration/IScript.php';
 
 
 class UnzerCw_Migration_2_1_0 implements Customweb_Database_Migration_IScript{
-
 	public function execute(Customweb_Database_IDriver $driver) {
-
-		$driver->query("CREATE TABLE IF NOT EXISTS unzercw_external_checkout_contexts (
-			contextId bigint(20) NOT NULL AUTO_INCREMENT,
-			state varchar (255) ,
-			failedErrorMessage varchar (255) ,
-			cartUrl varchar (255) ,
-			defaultCheckoutUrl varchar (255) ,
-			invoiceItems LONGTEXT ,
-			orderAmountInDecimals decimal (20,5) ,
-			currencyCode varchar (255) ,
-			languageCode varchar (255) ,
-			customerEmailAddress varchar (255) ,
-			customerId varchar (255) ,
-			transactionId int (11) ,
-			shippingAddress LONGTEXT ,
-			billingAddress LONGTEXT ,
-			shippingMethodName varchar (255) ,
-			paymentMethodMachineName varchar (255) ,
-			providerData LONGTEXT ,
-			createdOn datetime ,
-			updatedOn datetime ,
-			shippingMethodCode varchar (255) NULL DEFAULT NULL,
-			securityToken varchar (255) ,
-			securityTokenExpiryDate datetime NULL DEFAULT NULL,
-			authenticationSuccessUrl varchar(512) NULL DEFAULT NULL,
-			authenticationEmailAddress varchar (255) NULL DEFAULT NULL,
-			PRIMARY KEY (contextId)
-		) DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci ENGINE=InnoDB;")->execute();
-		
-	
+    //TODO migration to delete table if exists? for now just do not create
 	}
-
 }

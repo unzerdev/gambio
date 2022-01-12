@@ -34,7 +34,7 @@ require_once 'Customweb/Util/Url.php';
 require_once 'Customweb/Util/Html.php';
 
 require_once 'UnzerCw/Util.php';
-require_once 'UnzerCw/Compatibility.php';
+require_once 'UnzerCw/Button.php';
 require_once 'UnzerCw/Entity/Util.php';
 
 
@@ -93,10 +93,10 @@ if ($failedTransaction !== null) {
 
 $contentUnzerCw .= '<form action="' . $formData['formAction'] . '" method="POST">';
 $contentUnzerCw .= $formData['formContent'];
-$contentUnzerCw .= UnzerCw_Compatibility::getBackButton(UnzerCw_Util::getFrontendUrl('checkout_payment.php', array(), true));
+$contentUnzerCw .= UnzerCw_Button::getBackButton(UnzerCw_Util::getFrontendUrl('checkout_payment.php', array(), true));
 
 if (!isset($formData['showConfirmButton']) || $formData['showConfirmButton'] == true) {
-	$contentUnzerCw .= UnzerCw_Compatibility::getOrderConfirmationButton();
+	$contentUnzerCw .= UnzerCw_Button::getOrderConfirmationButton();
 }
 
 $contentUnzerCw .= '</form>';
