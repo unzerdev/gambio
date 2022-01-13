@@ -1,4 +1,4 @@
-![Logo](https://dev.unzer.com/wp-content/uploads/2020/09/Unzer__PrimaryLogo_Raspberry_RGB.png)
+![Logo](unzer_logo.svg)
 
 # Unzer Gambio Plugin
 This plugin provides for an easy way to connect to the Unzer Rest API.
