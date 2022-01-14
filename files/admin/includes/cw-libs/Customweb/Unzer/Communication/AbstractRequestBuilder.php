@@ -158,7 +158,7 @@ abstract class Customweb_Unzer_Communication_AbstractRequestBuilder extends Cust
 	}
 
 	private function getSdkVersionHeader(){
-		return "SDK-VERSION: 1.0.61";
+		return "SDK-VERSION: 1.0.16";
 	}
 
 	private function getSdkTypeHeader(){

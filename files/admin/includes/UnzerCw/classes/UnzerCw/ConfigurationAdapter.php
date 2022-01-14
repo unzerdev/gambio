@@ -96,9 +96,7 @@ class UnzerCw_ConfigurationAdapter implements Customweb_Payment_IConfigurationAd
 		return strtolower(self::getBaseModule()->getSettingValue('log_level'));
 		
 	}
-	
-	
-	
+
 	public function getLanguages($currentStore = false) {
 		$languages = array();
 		foreach (UnzerCw_Util::getLanguages() as $lang) {

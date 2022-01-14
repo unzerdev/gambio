@@ -106,14 +106,9 @@ class UnzerCw_Adapter_AjaxAdapter extends UnzerCw_Adapter_AbstractAdapter
 		$dbTransaction = $paymentMethod->newDatabaseTransaction();
 		$transaction = $this->getInterfaceAdapter()->createTransaction($paymentMethod->getTransactionContext($dbTransaction, null, $paymentMethod->getAliasTransactionId()), null);
 		$dbTransaction->setTransactionObject($transaction);
-		if (UnzerCw_ConfigurationAdapter::isPendingOrderModeActive()) {
-			$paymentMethod->writeTransactionLinkToOrder($dbTransaction);
-		}
-	
 		UnzerCw_Entity_Util::persist($dbTransaction);
 		$params = array_merge(array('cw_transaction_id' => $dbTransaction->getTransactionId()));
 		return UnzerCw_Util::getFrontendUrl('unzercw_payment.php', $params, true);
-	
 	}
 	
 	public function processPendingOrder(UnzerCw_OrderContext $orderContext, UnzerCw_PaymentMethod $paymentMethod) {
@@ -127,10 +122,6 @@ class UnzerCw_Adapter_AjaxAdapter extends UnzerCw_Adapter_AbstractAdapter
 		$dbTransaction->setTransactionObject($transaction);
 		UnzerCw_Entity_Util::persist($dbTransaction);
 
-		if (UnzerCw_ConfigurationAdapter::isPendingOrderModeActive()) {
-			$paymentMethod->writeTransactionLinkToOrder($dbTransaction);
-		}
-		
 		$ajaxUrl = $this->getInterfaceAdapter()->getAjaxFileUrl($transaction);
 		$callbackFunction = $this->getInterfaceAdapter()->getJavaScriptCallbackFunction($transaction);
 		UnzerCw_Entity_Util::persist($dbTransaction);

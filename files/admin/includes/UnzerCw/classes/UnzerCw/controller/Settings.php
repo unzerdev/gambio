@@ -34,9 +34,17 @@ class UnzerCw_Controller_Settings extends UnzerCw_AbstractController {
 	}
 	
 	public function editAction() {
+
+		$dir = UNZERCW_CATALOG_PATH . '/templates_c/';
+
+		if (!is_dir($dir)) {
+			if (false === @mkdir($dir, 0777, true)) {
+				throw new \RuntimeException(sprintf('Unable to create the %s directory', $dir));
+			}
+		}
 		
-		if (!is_writable(UNZERCW_CATALOG_PATH . '/templates_c/')) {
-			die("Folder '" . UNZERCW_CATALOG_PATH . "/templates_c/' is not writable.");
+		if (!is_writable($dir)) {
+			die("Folder $dir is not writable.");
 		}
 		
 		$renderer = new UnzerCw_SettingsRenderer($this->getModuleInstance());

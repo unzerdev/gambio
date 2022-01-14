@@ -239,11 +239,5 @@ class UnzerCw_Entity_Transaction extends Customweb_Payment_Entity_AbstractTransa
 		}
 		$this->setOrderId($rs[1]);
 		$this->setSessionData(array());
-
-		// Make sure we add the transaction link to the order. May be we wrote it earlier, however not in all cases.
-		$paymentMethod = UnzerCw_Util::getPaymentMehtodInstance($this->getPaymentClass());
-		$paymentMethod->writeTransactionLinkToOrder($this);
 	}
-
-
 }
